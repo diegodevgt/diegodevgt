@@ -1,0 +1,9 @@
+steps:
+  # Docker build
+  - name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/modified-badge-339006/diegodevgt/diegoimage', '.']
+
+  # Docker Push
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 
+           'us-central1-docker.pkg.dev/modified-badge-339006/diegodevgt/diegoimage']
